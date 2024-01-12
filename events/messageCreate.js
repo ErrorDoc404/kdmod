@@ -53,8 +53,6 @@ module.exports = async (client, message) => {
     if (cmd.premium) {
         return message.channel.send({ content: "**This command is premium only.**" });
     }
-
-    console.log(cmd);
     cmd.run(client, message, args, { GuildDB });
     client.CommandsRan++;
 
